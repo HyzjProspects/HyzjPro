@@ -1,75 +1,282 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	    <title>商城</title>
-	    <meta name="Keywords" content=""/>
-	    <meta name="description" content="" />
-	    <script src="js/mui.min.js"></script>
-	    <link href="css/mui.min.css" rel="stylesheet"/>
-	    <link rel="stylesheet" href="css/style.css" />
-	    <script type="text/javascript"> 
-	        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
-	        if (typeof(M) == 'undefined' || !M){
-	            window.M = {};
-	        }
-	    </script>
-	</head>
-	<body>
-		<div class="header">
-			<div class="header-left">
-				<a class="sb-back" href="javascript:history.back(-1)" title="返回"></a>
-			</div>
-			<div class="header-middle">订单列表
-			</div>
-			<div class="header-right">
-				<aside class="show-menu-btn">
-					<div class="show-menu" id="show_more">
-						<a href="javascript:void(0)"></a>
+<head>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<link href="css/allorder_style.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/tab.js"></script>
+</head>
+<body>
+
+<section class="aui-flexView">
+	<header class="aui-navBar aui-navBar-fixed">
+		<a href="javascript:history.go(-1);" class="aui-navBar-item">
+			<i class="icon icon-return"></i>
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title">我的订单</span>
+		</div>
+	</header>
+	<section class="aui-scrollView">
+		<div class="aui-tab" data-ydui-tab>
+			<ul class="tab-nav">
+				<li class="tab-nav-item tab-active">
+					<a href="javascript:;">全部</a>
+				</li>
+				<li class="tab-nav-item">
+					<a href="javascript:;">待付款</a>
+				</li>
+				<li class="tab-nav-item">
+					<a href="javascript:;">待收货</a>
+				</li>
+				<li class="tab-nav-item">
+					<a href="javascript:;">已完成</a>
+				</li>
+				<li class="tab-nav-item">
+					<a href="javascript:;">已取消</a>
+				</li>
+			</ul>
+			<div class="divHeight"></div>
+			<div class="tab-panel">
+				<div class="tab-panel-item tab-active">
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>南昌珍酒商城</h3>
+							</div>
+							<span class="aui-well-item-fr">已取消</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-001.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>6899.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">再次购买</a>
+							<a href="javascript:;" class="aui-df-color">评价晒单</a>
+							<a href="javascript:;" class="aui-df-color">查看发票</a>
+						</div>
 					</div>
-				</aside>
+					<div class="divHeight"></div>
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>自营Apple产品专营店</h3>
+							</div>
+							<span class="aui-well-item-fr">已取消</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-002.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>6899.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">再次购买</a>
+						</div>
+					</div>
+					<div class="divHeight"></div>
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>自营Apple产品专营店</h3>
+							</div>
+							<span class="aui-well-item-fr">已取消</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-003.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机Apple 苹果 iPhone8 Plus 4G手机 深空灰 移动联通版64G裸机</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>6899.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">再次购买</a>
+							<a href="javascript:;">再次购买</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-panel-item">
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>SONY京东自营官方旗舰店</h3>
+							</div>
+							<span class="aui-well-wait">等待付款</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-002.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>索尼（SONY）WH-1000XM2 Hi-Res无线蓝牙耳机 智能降噪耳机 头戴式 1000x二代 香槟金</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>2298.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">去支付</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-panel-item">
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>自营Apple产品专营店</h3>
+							</div>
+							<span class="aui-well-wait">等待收货</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-003.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>FILA斐乐男鞋2018夏季新款LOGO轻便复古跑鞋运动鞋男 标准白 41FILA斐乐男鞋2018夏季新款LOGO轻便复古跑鞋运动鞋男 标准白 41FILA斐乐男鞋2018夏季新款LOGO轻便复古跑鞋运动鞋男 标准白 41FILA斐乐男鞋2018夏季新款LOGO轻便复古跑鞋运动鞋男 标准白 41</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>6899.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">等待收货</a>
+							<a href="javascript:;" class="aui-df-color">再次购买</a>
+							<a href="javascript:;" class="aui-df-color">查看物流</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-panel-item">
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>自营Apple产品专营店</h3>
+							</div>
+							<span class="aui-well-item-fr"></span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-004.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>盼盼 酸梅汤 酸梅汁风味饮料 250ml*24盒 整箱 果汁饮料</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>21.90</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">再次购买</a>
+							<a href="javascript:;" class="aui-df-color">评价晒单</a>
+							<a href="javascript:;" class="aui-df-color">查看发票</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-panel-item">
+					<div class="tab-item">
+						<a href="javascript:void(0);" class="aui-well-item aui-well-item-clear">
+							<div class="aui-well-item-hd">
+								<img src="images/icon-logo.png" alt="">
+							</div>
+							<div class="aui-well-item-bd">
+								<h3>自营Apple产品专营店</h3>
+							</div>
+							<span class="aui-well-item-fr">已取消</span>
+						</a>
+						<div class="aui-mail-product">
+							<a href="javascript:;" class="aui-mail-product-item">
+								<div class="aui-mail-product-item-hd">
+									<img src="images/pd-005.png" alt="">
+								</div>
+								<div class="aui-mail-product-item-bd">
+									<p>OPPO R15 全面屏双摄拍照手机 4G+128G 雪盈白 全网通 移动联通电信4G 双卡双待手机</p>
+								</div>
+							</a>
+						</div>
+						<a href="javascript:;" class="aui-mail-payment">
+							<p>
+								共<em>1</em>
+								件商品 实付款: ￥<i>2499.00</i>
+							</p>
+						</a>
+						<div class="aui-mail-button">
+							<a href="javascript:;">再次购买</a>
+							<a href="javascript:;" class="aui-df-color">评价晒单</a>
+							<a href="javascript:;" class="aui-df-color">查看发票</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="order-box">
-
-	
-	<ul class="order-list-top">
-		<li>
-			<a href="javascript:void(0)" id="order_all" class="tabs- on">全部(0)</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" id="order_unpayed" class="tabs- ">待付款(0)</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" id="order_unshipped" class="tabs- ">待发货(0)</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" id="order_shipped" class="tabs- ">待收货(0)</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" id="order_unevaluate" class="tabs- ">待评价(0)</a>
-		</li>
-	</ul>
-	
-	
-	<div class="order-center-content" id="table_list">
-		
-		<div class="no-data-div">
-            <div class="no-data-img">
-                <img src="images/bg_empty_list.png">
-            </div>
-			<dl>
-				<dt>您还没有相关的订单</dt>
-				<dd>可以去看看哪些想买的</dd>
-			</dl>
-			
-			<a href="http://m.68dsw.com" class="no-data-btn">立即去购买</a>
-			
-		</div>
-		
-	</div>
-
-</div>
-	</body>
+	</section>
+</section>
+</body>
 </html>

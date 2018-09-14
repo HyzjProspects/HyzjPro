@@ -1,0 +1,100 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 55%;
+    background-color: #fff;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.icon_back1{
+    color: #000;
+    background: #f0dd33;
+    width: 5px !important;
+}
+
+.icon_back2{
+    color: #000;
+    background: #da1811;
+    width: 5px !important;
+}
+
+
+.detail_all{
+    margin-top: 4px;
+}
+
+.detail_all textarea{
+    margin-top: 2px;
+    font-size: small;
+}
+
+.detail_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.detail{
+    background: #fff;
+    margin-top: 2px;
+    padding-top: 8px;
+    padding-left: 14px;
+    padding-bottom: 8px;
+}
+
+.detail h4{
+    padding-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.detail s{
+    font-size: smaller;
+}
+
+.detail_goods{
+    margin-top: 4px;
+}
+
+.detail nav span{
+    font-size: 12px;
+}
+
+details_font{
+    color: black;font-size: 16px;
+}
+
+
+
